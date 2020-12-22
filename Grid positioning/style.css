@@ -1,0 +1,79 @@
+*
+{
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+._container
+{
+
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-color: yellowgreen;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+
+}
+
+._container :nth-child(odd)
+{
+
+    background-color: violet;
+
+}
+
+._container :nth-child(even)
+{
+
+    background-color: mediumslateblue;
+
+}
+
+._container h3
+{
+
+    background-color: green !important;
+    font-size: 30px;
+
+}
+
+._container_Child
+{
+
+    padding: 90px;
+
+}
+
+/* Main section */
+/* Box 1 in the position of Box 10 and Box 10 in the position of Box 1 */
+
+._box_1
+{
+
+    background-color: #fff !important;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 6;
+
+}
+
+._box_10
+{
+
+    background-color: rgb(20, 214, 37) !important;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    /* grid-row: 1 / span 3; */
+    grid-column: 1 / span 2;
+
+}

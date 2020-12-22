@@ -1,0 +1,86 @@
+*
+{
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+._container
+{
+
+    /* Making the container a grid container not all the content will be render in side of this container as 2-Dimensional */
+
+    display: grid;
+
+    /* Making rows of Grid-items, Number of parameter is denotes number of rows as well as width of each of the row */
+
+    grid-template-columns: 33.3% 33.3% 33.3%;
+
+    /* Saying after giving the First-column 30%, Third-column 20%, Second-column column should take the remaining space */
+
+    /* grid-template-columns: 30% auto 20%; */
+
+    /* Saying after giving Second and third column space as mentioned remaining space should take the first column */
+
+    /* grid-template-columns: auto 60% 33.3%; */
+    
+    /* From the entire width first row will be 10fr part second 5fr part third 6fr part respectively */
+
+    /* grid-template-columns: 10fr 5fr 6fr; */
+
+    /* repeat(How much column, Each of the column will take much space) */
+
+    /* grid-template-columns: repeat(3, 30%); */
+
+    /* Set equal gap between all the grid items */
+
+    /* grid-gap: 10px; */
+
+    /* This property defines the rows height of Grid-items, Each of parameter defines the height of the each of the row */
+
+    grid-template-rows: 10vh /* First row will take 10vh */ 30vh /* Second row will take 30vh */;
+
+    /* This property defines the remaining rows height */
+
+    grid-auto-rows: 300px;
+
+    /* 
+    grid-column-gap: 30px;
+    grid-row-gap: 80px;
+    */
+
+}
+
+._box1
+{
+
+    background-color: pink !important;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+
+}
+
+._container :nth-child(even)
+{
+
+    background-color: cadetblue;
+
+}
+
+._container :nth-child(odd)
+{
+
+    background-color: chocolate;
+
+}
+
+._container_Child
+{
+
+    /* Grid container's child, Called grid items */
+    
+    /* height: 200px; */
+
+}
